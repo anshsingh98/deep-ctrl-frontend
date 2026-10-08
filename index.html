@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Deep Ctrl - Control Cursor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">🖱</span>
+        <h1 class="logo-text">Deep Ctrl</h1>
+      </div>
+      <p class="version">v1.0.0</p>
+    </header>
+
+    <!-- Connection Status -->
+    <div id="connection-status" class="status-bar">
+      <span class="status-dot"></span>
+      <span id="status-text">Connecting...</span>
+    </div>
+
+    <!-- Main Control Area -->
+    <main class="controls">
+      <!-- Movement Area -->
+      <div class="control-section">
+        <div class="section-title">
+          <h3>Move Cursor</h3>
+          <small id="cursor-pos">Position: (0, 0)</small>
+        </div>
+        <div class="movement-area">
+          <div class="touch-zone" id="touch-zone">
+            <div class="cursor-indicator" id="cursor-indicator">
+              <div class="cursor-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="control-section">
+        <div class="section-title">
+          <h3>Actions</h3>
+        </div>
+        <div class="action-buttons">
+          <button class="btn btn-primary" id="btn-left-click">
+            <span class="btn-icon">👆</span>
+            <span class="btn-label">Left Click</span>
+          </button>
+          <button class="btn btn-primary" id="btn-right-click">
+            <span class="btn-icon">👆</span>
+            <span class="btn-label">Right Click</span>
+          </button>
+          <button class="btn btn-primary" id="btn-double-click">
+            <span class="btn-icon">🖱</span>
+            <span class="btn-label">Double Click</span>
+          </button>
+          <button class="btn btn-primary" id="btn-drag">
+            <span class="btn-icon">🖇</span>
+            <span class="btn-label">Drag</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scroll -->
+      <div class="control-section">
+        <div class="section-title">
+          <h3>Scroll</h3>
+        </div>
+        <div class="scroll-controls">
+          <div class="scroll-btn" id="scroll-up">
+            <span class="scroll-icon">📈</span>
+            <span class="scroll-label">Up</span>
+          </div>
+          <div class="scroll-btn" id="scroll-down">
+            <span class="scroll-icon">📉</span>
+            <span class="scroll-label">Down</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Settings -->
+      <div class="control-section">
+        <div class="section-title">
+          <h3>Settings</h3>
+        </div>
+        <div class="settings-list">
+          <label class="setting-item">
+            <input type="checkbox" id="toggle-smooth">
+            <span>Smooth Movement</span>
+          </label>
+          <label class="setting-item">
+            <input type="checkbox" id="toggle-auto-click">
+            <span>Auto Click (hold to click)</span>
+          </label>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p id="server-info">Server: Not Connected</p>
+      <p class="disclaimer">Control your laptop cursor. Make sure deep-ctrl backend is running.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
